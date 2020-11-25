@@ -23,13 +23,17 @@ function App() {
         birth={Moment(new Date('1992-07-14')).format('llll')}
         picture="https://randomuser.me/api/portraits/men/44.jpg"
       />
+      <hr/>
       <Greetings lang="en">Ludwig</Greetings>
       <Greetings lang="de">Ludwig</Greetings>
       <Greetings lang="es">Ludwig</Greetings>
       <Greetings lang="fr">Ludwig</Greetings>
+      <hr/>
       <Random min={1} max={6} />
       <Random min={1} max={100} />
-      <BoxColor r={255} g={0} b={0} />
+      <hr/>
+      <BoxColor r={255} g={100} b={0} />
+      <hr/>
       <CreditCard
         type="Visa"
         number="0123456789016984"
@@ -40,7 +44,9 @@ function App() {
         bgColor="#ddbb55"
         color="white"
       />
+      <hr/>
       <Rating>3.5</Rating>
+      <hr/>
       <DriverCard
         name="Dara Khosrowshahi"
         rating={4.9}
@@ -50,7 +56,9 @@ function App() {
           licensePlate: 'BE33ER',
         }}
       />
+      <hr/>
       <LikeButton />
+      <hr/>
       <ClickablePicture
         img="/img/persons/maxence.png"
         imgClicked="/img/persons/maxence-glasses.png"
