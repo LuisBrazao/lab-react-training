@@ -11,6 +11,10 @@ import Rating from './components/Rating';
 import DriverCard from './components/DriverCard';
 import LikeButton from './components/LikeButton';
 import ClickablePicture from './components/ClickablePicture';
+import Dice from './components/Dice';
+import Carousel from './components/Carousel';
+import NumbersTable from './components/NumbersTable';
+import FaceBook from './components/Facebook';
 
 function App() {
   return (
@@ -23,17 +27,17 @@ function App() {
         birth={Moment(new Date('1992-07-14')).format('llll')}
         picture="https://randomuser.me/api/portraits/men/44.jpg"
       />
-      <hr/>
+      <hr />
       <Greetings lang="en">Ludwig</Greetings>
       <Greetings lang="de">Ludwig</Greetings>
       <Greetings lang="es">Ludwig</Greetings>
       <Greetings lang="fr">Ludwig</Greetings>
-      <hr/>
+      <hr />
       <Random min={1} max={6} />
       <Random min={1} max={100} />
-      <hr/>
+      <hr />
       <BoxColor r={255} g={100} b={0} />
-      <hr/>
+      <hr />
       <CreditCard
         type="Visa"
         number="0123456789016984"
@@ -44,9 +48,9 @@ function App() {
         bgColor="#ddbb55"
         color="white"
       />
-      <hr/>
+      <hr />
       <Rating>3.5</Rating>
-      <hr/>
+      <hr />
       <DriverCard
         name="Dara Khosrowshahi"
         rating={4.9}
@@ -56,13 +60,29 @@ function App() {
           licensePlate: 'BE33ER',
         }}
       />
-      <hr/>
+      <hr />
       <LikeButton />
-      <hr/>
+      <hr />
       <ClickablePicture
         img="/img/persons/maxence.png"
         imgClicked="/img/persons/maxence-glasses.png"
       />
+
+      <Dice />
+
+      <Carousel
+        imgs={[
+          'https://randomuser.me/api/portraits/women/1.jpg',
+          'https://randomuser.me/api/portraits/men/1.jpg',
+          'https://randomuser.me/api/portraits/women/2.jpg',
+          'https://randomuser.me/api/portraits/men/2.jpg',
+        ]}
+      />
+
+      <NumbersTable limit={12} />
+
+        <FaceBook />
+
     </div>
   );
 }
